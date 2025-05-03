@@ -23,8 +23,16 @@ public class PacienteService {
         return pacienteRepository.findById(id);
     }
 
+    public Paciente getPatientById2(int id){
+        return pacienteRepository.findById(id).get();
+    }
+    
     public Paciente save(Paciente paciente){
         return pacienteRepository.save(paciente);
+    }
+
+    public void delete(int id){
+        pacienteRepository.deleteById(id);
     }
 
 }
