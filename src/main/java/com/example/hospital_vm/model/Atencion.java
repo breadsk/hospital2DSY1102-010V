@@ -17,7 +17,7 @@ public class Atencion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int id_atencion;
 
     @Temporal(TemporalType.DATE)
     @Column(nullable = false)
@@ -31,7 +31,7 @@ public class Atencion {
     private Double costo;
 
     @ManyToOne
-    @JoinColumn(name="id",nullable = false)
+    @JoinColumn(name="id_paciente",nullable = false)
     private Paciente paciente;
 
     @Column(nullable = false)

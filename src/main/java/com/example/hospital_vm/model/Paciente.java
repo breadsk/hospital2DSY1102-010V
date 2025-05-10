@@ -17,7 +17,7 @@ public class Paciente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int id_paciente;
 
     @Column(unique=true,length=13,nullable=false)
     private String rut;
